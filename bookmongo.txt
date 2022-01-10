@@ -1,0 +1,104 @@
+db.book.insertMany(
+[
+{"book_title":"mean web development",
+"author":"Amos Q. Haviv",
+"publication":" Packt Publishing Ltd",
+"edition":"1.0.0",
+"year_of_publication":"September 2014",
+"ISBN_No":978-1-78398-328-5,
+"type_of_book":"textbook",
+},
+
+{
+"book_title":"Big Data Anaylatics",
+"author":"Seema Acharya",
+"publication":" Packt Publishing Ltd",
+"edition":"2.0.0",
+"year_of_publication":"September 2019",
+"ISBN_No":928-2-78398-234-6,
+"type_of_book":"textbook",
+},
+
+{
+"book_title":"Machine Learning",
+"author":"Tom Mitchell",
+"publication":" O'Reilly Media",
+"edition":"3.0.0",
+"year_of_publication":"28 july 2016",
+"ISBN_No":908-3-76543-123-5,
+"type_of_book":"textbook",
+},
+{
+"book_title":"Java",
+"author":"Ketty Sierra",
+"publication":" Packt Publishing Ltd",
+"edition":"5.0.0",
+"year_of_publication":"September 2014",
+"ISBN_No":978-1-78398-328-5,
+"type_of_book":"textbook",
+},
+{
+"book_title":"C#",
+"author":"Andrew Troelsen",
+"publication":" WP publishers",
+"edition":"4.0.0",
+"year_of_publication":"2001",
+"ISBN_No":342-1-87623-128-6,
+"type_of_book":"textbook",
+},
+{
+"book_title":"DS",
+"author":"jack roman",
+"publication":" JR publishers",
+"edition":"4.0.1",
+"year_of_publication":"2002",
+"ISBN_No":752-2-87462-185-6,
+"type_of_book":"textbook",
+},
+{
+"book_title":"Python",
+"author":"steve Harvy",
+"publication":" SK publications",
+"edition":"2.0.0",
+"year_of_publication":"2000",
+"ISBN_No":485-2-45853-125-4,
+"type_of_book":"textbook",
+},
+{
+"book_title":"Operating System",
+"author":"John Barv",
+"publication":" Packt publishers",
+"edition":"4.0.0",
+"year_of_publication":"2004",
+"ISBN_No":220-1-45268-125-4,
+"type_of_book":"textbook",
+},
+{
+"book_title":"C++ Programming",
+"author":"Andrew losong",
+"publication":" APK publishers",
+"edition":"4.0.0",
+"year_of_publication":"1998",
+"ISBN_No":111-1-24875-224-6,
+"type_of_book":"textbook",
+},
+{
+"book_title":"Computer Networks",
+"author":"anwar soill",
+"publication":"SB publishers",
+"edition":"3.1.0",
+"year_of_publication":"2003",
+"ISBN_No":372-4-25874-258-4,
+"type_of_book":"textbook",
+}
+]);
+
+
+
+codb.book.find({"book_title":"Java"});
+
+db.book.find({"book_title":"Java","year_of_publication":{$gt:2015}});
+
+db.book.find({"book_title":{$gt:2}}).count();
+
+db.book.find({"edition":{$gt:"3",$lt:"4"}});
